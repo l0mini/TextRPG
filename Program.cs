@@ -40,8 +40,8 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 숫자를 입력해 다시시도");
-                        choice = int.Parse(Console.ReadLine());
+                        Console.WriteLine("아무 키를 입력해 다시시도");
+                        Console.ReadLine();
                     }
                 }
             }
@@ -85,8 +85,8 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 숫자를 입력해 다시시도");
-                        choice = int.Parse(Console.ReadLine());
+                        Console.WriteLine("아무 키를 입력해 다시시도");
+                        Console.ReadLine();
                     }
                 }
             }
@@ -127,16 +127,15 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 숫자를 입력해 다시시도");
-                        choice = int.Parse(Console.ReadLine());
+                        Console.WriteLine("아무 키를 입력해 다시시도");
+                        Console.ReadLine();
                     }
                 }
             }
         }
 
         class ItemEquipped//장착관리
-        {
-            
+        {  
             public void Equals()
             {
                 Inventory inventory = new Inventory();
@@ -162,8 +161,8 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 숫자를 입력해 다시시도");
-                        choice = int.Parse(Console.ReadLine());
+                        Console.WriteLine("아무 키를 입력해 다시시도");
+                        Console.ReadLine();
                     }
                 }
             }
@@ -207,8 +206,8 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 숫자를 입력해 다시시도");
-                        choice = int.Parse(Console.ReadLine());
+                        Console.WriteLine("아무 키를 입력해 다시시도");
+                        Console.ReadLine();
                     }
                 }
             }
