@@ -2,9 +2,26 @@
 {
     internal class Program
     {
+       
+        
         public class GamePlace
         {
-            public void StartSence()
+            Start start = new Start();
+            public void Start()
+            {
+                start.StartSence();
+            }
+            
+
+            //시작화면
+            //상태 보기
+            //인벤토리
+            //장착관리
+            //상점
+        }
+          class Start
+        {
+             public void StartSence()
             {
                 while (true)
                 {
@@ -21,52 +38,47 @@
                     int choice = int.Parse(Console.ReadLine());
                 }
             }
-            //시작화면
-            //상태 보기
-            //인벤토리
-            //장착관리
-            //상점
-        }
-        class Player
-        {
-            int level = 1;
-            string name = "플레이어";
-            string jop = "전사";
-            int attackPower = 10;
-            int defensePower = 5;
-            int health = 100;
-            int haveGold = 1500;
-        }
+            class Player
+            {
+                int level = 1;
+                string name = "플레이어";
+                string jop = "전사";
+                int attackPower = 10;
+                int defensePower = 5;
+                int health = 100;
+                int haveGold = 1500;
+            }
 
-        class Inventory
-        {
+            class Inventory
+            {
 
-        }
+            }
 
-        class ItemEquipped
-        { 
+            class ItemEquipped
+            {
 
-        }
+            }
 
-        class Shop
-        {
+            class Shop
+            {
 
-        }
+            }
 
-        class Shopping
-        {
+            class Shopping
+            {
 
-        }
+            }
 
 
-        static void Main(string[] args)
-        {
-            GamePlace gamePlace = new GamePlace();
-            gamePlace.StartSence();
+            static void Main(string[] args)
+            {
+                GamePlace gamePlace = new GamePlace();
+                gamePlace.Start();
 
-            Console.Clear();
+                Console.Clear();
 
-            Console.ReadLine();
+                Console.ReadLine();
+            }
         }
     }
 }
