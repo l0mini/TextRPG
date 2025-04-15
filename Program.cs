@@ -9,9 +9,10 @@
                 Player player = new Player();
                 Inventory inventory = new Inventory();
                 Shop shop = new Shop();
+
                 while (true)
                 {
-                    
+                    Console.Clear();
                     Console.WriteLine("스파르타 마을에 오신 여러분 환영합니다.");
                     Console.WriteLine("이곳에서 던전으로 들어가기전 활동을 할 수 있습니다.");
                     Console.WriteLine();
@@ -25,24 +26,21 @@
 
                     if (choice == 1)
                     {
-                        Console.Clear();
                         player.PlayerInfo();
                     }
                     else if (choice == 2)
                     {
-                        Console.Clear();
                         inventory.ShowInven();
                     }
                     else if (choice == 3)
-                    {
-                        Console.Clear();
+                    { 
                         shop.ShowShop();
                     }
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine("아무 숫자를 입력해 다시시도");
                         choice = int.Parse(Console.ReadLine());
-                        Console.Clear();
                     }
                 }
             }
@@ -63,7 +61,7 @@
             {
                 while (true)
                 {
-                    
+                    Console.Clear();
                     Console.WriteLine("상태 보기");
                     Console.WriteLine("캐릭터의 정보가 표시됩니다.");
                     Console.WriteLine();
@@ -80,14 +78,13 @@
 
                     if (choice == 0)
                     {
-                        Console.Clear();
                         start.StartSence();
                     }
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine("아무 숫자를 입력해 다시시도");
                         choice = int.Parse(Console.ReadLine());
-                        Console.Clear();
                     }
                 }
             }
@@ -102,7 +99,7 @@
             {
                 while (true)
                 {
-                    
+                    Console.Clear();
                     Console.WriteLine("인벤토리");
                     Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
                     Console.WriteLine();
@@ -117,19 +114,17 @@
 
                     if (choice == 0)
                     {
-                        Console.Clear();
                         Start.StartSence();
                     }
                     else if (choice == 1)
                     {
-                        Console.Clear();
                         itemEquipped.Equals();
                     }
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine("아무 숫자를 입력해 다시시도");
                         choice = int.Parse(Console.ReadLine());
-                        Console.Clear();
                     }
                 }
             }
@@ -153,7 +148,7 @@
             {
                 while (true)
                 {
-                    
+                    Console.Clear();
                     Console.WriteLine("상점");
                     Console.WriteLine("필요한 아이템을 얻을 수 있는 상점입니다.");
                     Console.WriteLine();
@@ -171,19 +166,17 @@
 
                     if (choice == 0)
                     {
-                        Console.Clear();
                         start.StartSence();
                     }
                     else if (choice == 1)
                     {
-                        Console.Clear();
                         shopping.BuyScene();
                     }
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine("아무 숫자를 입력해 다시시도");
                         choice = int.Parse(Console.ReadLine());
-                        Console.Clear();
                     }
                 }
             }
