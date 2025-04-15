@@ -4,6 +4,7 @@
     {
         class Start//시작화면
         {
+           
             public void StartSence()
             {
                 Player player = new Player();
@@ -47,7 +48,7 @@
         }
         class Player//상태 보기
         {
-            Start start = new Start();
+            
 
             int level = 1;
             string name = "플레이어";
@@ -59,6 +60,7 @@
 
             public void PlayerInfo()
             {
+                Start start = new Start();
                 while (true)
                 {
                     Console.Clear();
@@ -92,11 +94,13 @@
 
         class Inventory//인벤토리
         {
-            Start Start = new Start();
-            ItemEquipped itemEquipped = new ItemEquipped();
+            
             string[] Item = { }; //아이템들어갈 배열
             public void ShowInven()
             {
+                Start Start = new Start();
+                ItemEquipped itemEquipped = new ItemEquipped();
+
                 while (true)
                 {
                     Console.Clear();
@@ -136,6 +140,7 @@
             public void Equals()
             {
                 Inventory inventory = new Inventory();
+
                 while (true)
                 {
                     Console.Clear();
