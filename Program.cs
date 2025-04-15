@@ -132,11 +132,38 @@
 
         class ItemEquipped//장착관리
         {
+            
             public void Equals()
             {
+                Inventory inventory = new Inventory();
+                while (true)
+                {
+                    Console.Clear();
+                    Console.WriteLine("인벤토리");
+                    Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
+                    Console.WriteLine();
+                    Console.WriteLine("[아이템 목록]");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("0. 나가기");
+                    Console.WriteLine();
+                    Console.WriteLine("원하시는 행동을 입력해주세요.");
+                    int choice = int.Parse(Console.ReadLine());
 
+                    if (choice == 0)
+                    {
+                        inventory.ShowInven();
+                    }
+                    else
+                    {
+                        Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine("아무 숫자를 입력해 다시시도");
+                        choice = int.Parse(Console.ReadLine());
+                    }
+                }
             }
         }
+        
 
         class Shop//상점
         {
