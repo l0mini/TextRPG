@@ -1,7 +1,26 @@
-﻿namespace TextRPG
+﻿using System.Net.Http.Headers;
+
+namespace TextRPG
 {
+    public enum Place
+    {
+        Start,
+        Player,
+        Inventory,
+        ItemEquipped,
+        Shop,
+        Shopping,
+        Exit
+    }
+
     internal class Program
     {
+        static void Main(string[] args)
+        {
+            Start start = new Start();
+            start.StartSence();
+        }
+
         class Start//시작화면
         {
            
@@ -40,8 +59,7 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 키를 입력해 다시시도");
-                        Console.ReadLine();
+                       Thread.Sleep(1000);
                     }
                 }
             }
@@ -56,7 +74,7 @@
             int attackPower = 10;
             int defensePower = 5;
             int health = 100;
-            int haveGold = 1500;
+            public int haveGold = 1500;
 
             public void PlayerInfo()
             {
@@ -85,8 +103,7 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 키를 입력해 다시시도");
-                        Console.ReadLine();
+                        Thread.Sleep(1000);
                     }
                 }
             }
@@ -127,8 +144,7 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 키를 입력해 다시시도");
-                        Console.ReadLine();
+                       Thread.Sleep(1000);
                     }
                 }
             }
@@ -161,8 +177,7 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 키를 입력해 다시시도");
-                        Console.ReadLine();
+                        Thread.Sleep(1000);
                     }
                 }
             }
@@ -171,8 +186,8 @@
 
         class Shop//상점
         {
-            int haveGold = 0;
-            Player Player = new Player();
+            int haveGold;
+            Player Player;
             Shopping shopping = new Shopping();
             Start start = new Start();
             public void ShowShop()
@@ -206,13 +221,14 @@
                     else
                     {
                         Console.WriteLine("잘못된 입력입니다.");
-                        Console.WriteLine("아무 키를 입력해 다시시도");
-                        Console.ReadLine();
+                        Thread.Sleep(1000);
+                        
                     }
+                    
                 }
             }
         }
-
+        
         class Shopping//상점 구매
         {
             public void BuyScene()
@@ -221,11 +237,7 @@
             }
         }
 
-        static void Main(string[] args)
-        {
-            Start start = new Start();
-            start.StartSence();
-        }
+       
     } 
 }
 
