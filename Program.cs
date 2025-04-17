@@ -40,8 +40,8 @@ namespace TextRPG
             startScene = new StartScene();
             player = new Player();
             shop = new Shop(player);
-            shopping = new Shopping(shop.AllItems, player);
             inventory = new Inventory(shop.AllItems);
+            shopping = new Shopping(shop.AllItems, player, inventory);
             itemEquipped = new ItemEquipped();
             currentPlace = Place.Start;
         }
@@ -189,6 +189,7 @@ namespace TextRPG
     class Inventory//인벤토리
     {
         public List<Item> AllItems;
+
         public Inventory(List<Item> AllItems)
         {
             this.AllItems = AllItems.Where(item => item.itemPro.IsSold).ToList();
@@ -363,9 +364,11 @@ namespace TextRPG
     class Shopping//상점 구매
     {
         public List<Item> AllItems;
+        Inventory inventory;
         Player player;
-        public Shopping(List<Item> AllItems, Player player)
+        public Shopping(List<Item> AllItems, Player player, Inventory inventory)
         {
+            this.inventory = inventory;
             this.player = player;
             this.AllItems = AllItems;
         }
@@ -417,7 +420,7 @@ namespace TextRPG
                     {
                         player.haveGold -= selectedItem.itemPro.ItemValue;
                         selectedItem.itemPro.IsSold = true;
-
+                        inventory.AllItems.Add(selectedItem);
                         Console.WriteLine("구매 완료!");
                     }
                     else if (selectedItem.itemPro.IsSold && player.haveGold < selectedItem.itemPro.ItemValue)
@@ -465,11 +468,11 @@ class ItemPro
     {
         if (IsSold && IsArmor)
         {
-            return $"-{ItemName} | {ItemStat} | {ItemInfo} | [판매 완료]";
+            return $"-{ItemName} | 방어력 : {ItemStat} | {ItemInfo} | [판매 완료]";
         }
         else if (IsSold && IsWeapon)
         {
-            return $"-{ItemName} | {ItemStat} | {ItemInfo} | [판매 완료]";
+            return $"-{ItemName} | 공격력 : {ItemStat} | {ItemInfo} | [판매 완료]";
         }
         else if (!IsSold && IsArmor)
         {
