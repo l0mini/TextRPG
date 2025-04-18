@@ -1,0 +1,22 @@
+{
+  "player": {
+    "totalAttack": 10,
+    "totalDefense": 5
+  },
+  "inventory": {},
+  "shop": {
+    "AllItems": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "lastSaveTime": "2025-04-18T13:44:37.1292597+09:00"
+}
