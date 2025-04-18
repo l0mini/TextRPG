@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Newtonsoft.Json;
 
 namespace TextRPG
 {
@@ -71,8 +72,6 @@ namespace TextRPG
                         currentPlace = dongeonClear.DungeonClearScene();
                         break;
                     case Place.Exit:
-                        Thread.Sleep(1000);
-                        Console.WriteLine("게임을 종료합니다.");
                         Thread.Sleep(1000);
                         return;
                 }

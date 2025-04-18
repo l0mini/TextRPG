@@ -42,6 +42,7 @@ namespace TextRPG
                 if (Player.totalDefense >= mDefense)
                 {
                     DungeonClear(mDefense, gold);
+                    Player.LevelUp();
 
                 }
                 else if (Player.totalDefense < mDefense)
@@ -53,6 +54,7 @@ namespace TextRPG
                     else
                     {
                         DungeonClear(mDefense, gold);
+                        Player.LevelUp();
                     }
                 }
             }
@@ -63,6 +65,7 @@ namespace TextRPG
                 if (Player.totalDefense >= mDefense)
                 {
                     DungeonClear(mDefense, gold);
+                    Player.LevelUp();
                 }
                 else if (Player.totalDefense < mDefense)
                 {
@@ -73,6 +76,7 @@ namespace TextRPG
                     else
                     {
                         DungeonClear(mDefense, gold);
+                        Player.LevelUp();
                     }
                     
                 }
@@ -84,6 +88,7 @@ namespace TextRPG
                 if (Player.totalDefense >= mDefense)
                 {
                     DungeonClear(mDefense, gold);
+                    Player.LevelUp();
                 }
                 else if (Player.totalDefense < mDefense)
                 {
@@ -94,6 +99,7 @@ namespace TextRPG
                     else
                     {
                         DungeonClear(mDefense, gold);
+                        Player.LevelUp();
                     }
 
                 }

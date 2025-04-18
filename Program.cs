@@ -21,11 +21,15 @@ namespace TextRPG
 
     internal class Program
     {
+        static Player player;
         static void Main(string[] args)
         {
+            GameData gameData = Save.Load();
 
             GameManager gameManager = new GameManager();
             gameManager.GameRoof();
+
+            Save.SaveData(player);
 
         }
     }
