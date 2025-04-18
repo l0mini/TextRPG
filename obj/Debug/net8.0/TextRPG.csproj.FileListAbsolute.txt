@@ -13,3 +13,6 @@ C:\workspace\TextRPG\TextRPG\obj\Debug\net8.0\TextRPG.pdb
 C:\workspace\TextRPG\TextRPG\obj\Debug\net8.0\TextRPG.genruntimeconfig.cache
 C:\workspace\TextRPG\TextRPG\obj\Debug\net8.0\ref\TextRPG.dll
 C:\workspace\TextRPG\TextRPG\obj\Debug\net8.0\TextRPG.sourcelink.json
+C:\workspace\TextRPG\TextRPG\obj\Debug\net8.0\TextRPG.csproj.AssemblyReference.cache
+C:\workspace\TextRPG\TextRPG\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\workspace\TextRPG\TextRPG\obj\Debug\net8.0\TextRPG.csproj.Up2Date

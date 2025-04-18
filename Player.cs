@@ -7,8 +7,8 @@ namespace TextRPG
     {
         public int clearStack = 0;
         public int playerLevel = 1;
-        string name = "스파르타인";
-        string jop = "전사";
+       public string name = "스파르타인";
+       public string jop = "전사";
         public float attackPower = 10;
         public int defensePower = 5;
         public int health = 100;
@@ -50,7 +50,6 @@ namespace TextRPG
         }
         public Place PlayerInfoScene()
         {
-            LevelUp();
             Console.Clear();
             Console.WriteLine("상태 보기");
             Console.WriteLine("캐릭터의 정보가 표시됩니다.");
